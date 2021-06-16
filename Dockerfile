@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM debian:stable
 
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Set up the default locale
 ENV LANG="en_US.UTF-8"
 ENV LANGUAGE="en_US.UTF-8"
